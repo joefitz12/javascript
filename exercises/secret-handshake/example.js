@@ -12,13 +12,13 @@ function SecretHandshake(handshake) {
     return this.shakeWith;
   };
 
-  this.calculateHandshake = function (handshake) {
+  this.calculateHandshake = function (handshakeInner) {
     /* jshint bitwise:false */
     var shakeWith = [];
 
     for (var i = 0; i < handshakeCommands.length; i++) {
       var currentCommand = handshakeCommands[i];
-      var handshakeHasCommand = (handshake & Math.pow(2, i));
+      var handshakeHasCommand = (handshakeInner & Math.pow(2, i));
 
       if (handshakeHasCommand) {
         if (currentCommand === 'REVERSE') {
