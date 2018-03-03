@@ -13,7 +13,6 @@ function SecretHandshake(handshake) {
   };
 
   this.calculateHandshake = function (handshakeInner) {
-    /* jshint bitwise:false */
     var shakeWith = [];
 
     for (var i = 0; i < handshakeCommands.length; i++) {
